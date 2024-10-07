@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Red Social</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Red Social</h1>
+    <% if (mensaje) {%><h3><%= mensaje.message %></h3>
+    <%} else {%>
+        <ul>
+        <% for(let i = 0; i < comentarios.length; i++) {%>
+            <li>
+                <b><%= comentarios[i].comentario %></b>
+                <br>
+                <span><%= comentarios[i].usuarios_id %></span>
+            </li>
+            <br>
+        <%} %>
+        </ul>
+    <%} %>
+  </body>
+</html>
